@@ -36,22 +36,21 @@ on a server simulating as opponent's robot arm.
 
 
 <p>
-many thanks to my friends and colleagues for their hard work and finishing the project perfectly, It was tough.
-
-[Ahmed Sabry Lilah](https://www.linkedin.com/in/ahmed-sabry-liah/)
-Alyaa Mosaad Sherif
-[Moataz Mohammed Ibrahim](https://www.linkedin.com/in/moataz-towfik-012a5a238/)
-Mohamed Ashraf Ali
-[Mohamed Moataz Moustafa](https://www.linkedin.com/in/mohamed-moataz/) (thats me)
-[Mostfa Hisham Abd Elgawad](https://www.linkedin.com/in/mostafa-hesham-6395a1218?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+many thanks to my friends and colleagues for their hard work and finishing the project perfectly, It was tough.<br>
+[Ahmed Sabry Lilah](https://www.linkedin.com/in/ahmed-sabry-liah/)<br>
+Alyaa Mosaad Sherif<br>
+[Moataz Mohammed Ibrahim](https://www.linkedin.com/in/moataz-towfik-012a5a238/)<br>
+Mohamed Ashraf Ali<br>
+[Mohamed Moataz Moustafa](https://www.linkedin.com/in/mohamed-moataz/) (thats me)<br>
+[Mostfa Hisham Abd Elgawad](https://www.linkedin.com/in/mostafa-hesham-6395a1218?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)<br>
 ​
 
-and spetial thanks to our Supervisor 
-Dr.Mohammed El-Sayed Ali Hammad
+and spetial thanks to our Supervisor <br>
+Dr.Mohammed El-Sayed Ali Hammad.<br>
 
-I also should thank [Dr.refaat AbouZaid](https://www.youtube.com/@dr_refaatabouzaid1039) for his help and supoort during the project.
-and My colleague that was Support us morally despite not being in the team, Thank you shimaa el-ket.
+I also should thank [Dr.refaat AbouZaid](https://www.youtube.com/@dr_refaatabouzaid1039) for his help and supoort during the project.<br>
+and My colleague that was Support us morally despite not being in the team, Thank you shimaa el-ket.<br>
 
-Discussion date : 2 / 7 / 2022 at
+Discussion date : 2 / 7 / 2022 at<br>
 [Higher Institute of Engineering and Technology in Tanta. (THIET)](https://thiet.edu.eg/ar)
 </p>
