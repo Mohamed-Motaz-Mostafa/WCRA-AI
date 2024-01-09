@@ -2,7 +2,7 @@
 Graduation Project repo.
 
 
-(![grad-project img](image.png))
+![grad-project img](image.png)
 
 <p>
 This repo will contain a summary to my graduation project,
