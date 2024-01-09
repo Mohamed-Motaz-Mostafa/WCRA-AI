@@ -1,6 +1,6 @@
 # WCRA-AI
 Graduation Project repo.
-![Markdown logo](![grad-project logo](image.png))
+(![grad-project img](image.png))
 
 <p>
 This repo will contain a summary to my graduation project,
