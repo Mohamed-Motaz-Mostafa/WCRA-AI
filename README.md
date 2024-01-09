@@ -30,10 +30,28 @@ on a server simulating as opponent's robot arm.
 
 </p>
 
-## Project block diagra
+### Project block diagra
 ![block_diagram](https://github.com/Mohamed-Motaz-Mostafa/WCRA-AI/assets/156100459/5ee3654a-dfce-4e1c-bdce-1d408b6e4afa)
 
 
 
+<p>
+many thanks to my friends and colleagues for their hard work and finishing the project perfectly, It was tough.
 
+[Ahmed Sabry Lilah](https://www.linkedin.com/in/ahmed-sabry-liah/)
+Alyaa Mosaad Sherif
+[Moataz Mohammed Ibrahim](https://www.linkedin.com/in/moataz-towfik-012a5a238/)
+Mohamed Ashraf Ali
+[Mohamed Moataz Moustafa](https://www.linkedin.com/in/mohamed-moataz/) (thats me)
+[Mostfa Hisham Abd Elgawad](https://www.linkedin.com/in/mostafa-hesham-6395a1218?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+​
 
+and spetial thanks to our Supervisor 
+Dr.Mohammed El-Sayed Ali Hammad
+
+I also should thank [Dr.refaat AbouZaid](https://www.youtube.com/@dr_refaatabouzaid1039) for his help and supoort during the project.
+and My colleague that was Support us morally despite not being in the team, Thank you shimaa el-ket.
+
+Discussion date : 2 / 7 / 2022 at
+[Higher Institute of Engineering and Technology in Tanta. (THIET)](https://thiet.edu.eg/ar)
+</p>
