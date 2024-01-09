@@ -1,0 +1,995 @@
+model Output  :  0
+temp =======================>>>> [9.211058 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.198547   3.3905852  0.       ]
+model Output  :  0
+temp =======================>>>> [13.714614  5.255979  0.      ]
+model Output  :  0
+temp =======================>>>> [7.779498 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.60426    5.7669215  0.       ]
+model Output  :  0
+temp =======================>>>> [8.283476 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.670169  5.036514  0.      ]
+model Output  :  0
+temp =======================>>>> [ 0.       27.25168   3.819994]
+model Output  :  1
+temp =======================>>>> [13.38543    3.9954278  0.       ]
+model Output  :  0
+temp =======================>>>> [8.748773 0.       1.784225]
+model Output  :  0
+temp =======================>>>> [7.5210505 0.        0.       ]
+model Output  :  0
+temp =======================>>>> [ 4.258624 16.596926  0.      ]
+model Output  :  1
+temp =======================>>>> [8.249116 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [12.648788  5.727679  0.      ]
+model Output  :  0
+temp =======================>>>> [ 0.        25.251654   5.4894547]
+model Output  :  1
+temp =======================>>>> [13.614384   4.2686324  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.        30.544123   5.0839987]
+model Output  :  1
+temp =======================>>>> [12.632123   3.5288625  0.       ]
+model Output  :  0
+temp =======================>>>> [13.444343   5.2131877  0.       ]
+model Output  :  0
+temp =======================>>>> [8.308914 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.469537   5.4377475  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.        32.963028   3.2046742]
+model Output  :  1
+temp =======================>>>> [13.306009  4.61006   0.      ]
+model Output  :  0
+temp =======================>>>> [8.393643  0.        1.5166667]
+model Output  :  0
+temp =======================>>>> [13.120485   3.7867308  0.       ]
+model Output  :  0
+temp =======================>>>> [8.995062  0.        2.2563705]
+model Output  :  0
+temp =======================>>>> [8.427518   0.         0.35297915]
+model Output  :  0
+temp =======================>>>> [13.363987   4.8940187  0.       ]
+model Output  :  0
+temp =======================>>>> [9.195346 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [11.878494   6.0053735  0.       ]
+model Output  :  0
+temp =======================>>>> [10.117749  0.        0.      ]
+model Output  :  0
+temp =======================>>>> [13.031603   3.9805617  0.       ]
+model Output  :  0
+temp =======================>>>> [9.438806  0.        1.3401716]
+model Output  :  0
+temp =======================>>>> [12.498722   3.2291112  0.       ]
+model Output  :  0
+new board :
+['1', '1', '1', '1', '1', '1', '1', '1']
+['1', '1', '1', '1', '1', 'k', '1', '1']
+['1', '1', '1', 'R', '1', '1', '1', '1']
+['1', '1', 'P', '1', '1', '1', '1', '1']
+['1', '1', '1', '1', '1', 'P', '1', '1']
+['1', 'P', '1', '1', 'P', '1', 'P', '1']
+['1', '1', '1', 'K', '1', '1', '1', '1']
+['1', '1', '1', '1', '1', '1', '1', '1']
+Your move is :  a6d6
+next_move : f7g8
+. . . . . . k .
+. . . . . . . .
+. . . R . . . .
+. . P . . . . .
+. . . . . P . .
+. P . . P . P .
+. . . K . . . .
+. . . . . . . .
+AI Move :  f7g8
+Make your move : 
+10 secand lift.......
+[2:03:39.740596700] [30878]  INFO Camera camera_manager.cpp:293 libcamera v0.0.0+3548-a11d63f9
+[2:03:39.765356089] [30879] ERROR CameraSensor camera_sensor.cpp:591 'ov5647 10-0036': Camera sensor does not support test pattern modes.
+[2:03:39.783604324] [30879]  INFO RPI raspberrypi.cpp:1352 Registered camera /base/soc/i2c0mux/i2c@1/ov5647@36 to Unicam device /dev/media0 and ISP device /dev/media1
+[2:03:39.784704883] [30878]  INFO Camera camera.cpp:1029 configuring streams: (0) 1296x972-YUV420
+[2:03:39.785078045] [30879]  INFO RPI raspberrypi.cpp:760 Sensor: /base/soc/i2c0mux/i2c@1/ov5647@36 - Selected sensor format: 1296x972-SGBRG10_1X10 - Selected unicam format: 1296x972-pGAA
+[2:03:39.807006508] [30883]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Saturation = 1.000000
+[2:03:39.807134303] [30883]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Contrast = 1.000000
+[2:03:39.807162506] [30883]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Brightness = 0.000000
+[2:03:39.807190117] [30883]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AwbMode = 0
+[2:03:39.807217043] [30883]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Sharpness = 1.000000
+[2:03:39.807245950] [30883]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: ExposureValue = 0.000000
+[2:03:39.807296116] [30883]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AeExposureMode = 0
+[2:03:39.807321097] [30883]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: FrameDurationLimits = [ 33333, 33333 ]
+[2:03:39.807353226] [30883]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AeMeteringMode = 0
+[2:03:39.807376429] [30883]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: NoiseReductionMode = 3
+[2:03:44.947813288] [30878]  INFO Camera camera.cpp:1029 configuring streams: (0) 2592x1944-YUV420 (1) 2592x1944-SGBRG10_CSI2P
+[2:03:44.949252231] [30879]  INFO RPI raspberrypi.cpp:760 Sensor: /base/soc/i2c0mux/i2c@1/ov5647@36 - Selected sensor format: 2592x1944-SGBRG10_1X10 - Selected unicam format: 2592x1944-pGAA
+[2:03:45.049472935] [30886]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Saturation = 1.000000
+[2:03:45.049671266] [30886]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Contrast = 1.000000
+[2:03:45.049749024] [30886]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Brightness = 0.000000
+[2:03:45.049815264] [30886]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AwbMode = 0
+[2:03:45.049900041] [30886]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Sharpness = 1.000000
+[2:03:45.049964188] [30886]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: ExposureValue = 0.000000
+[2:03:45.050067409] [30886]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AeExposureMode = 0
+[2:03:45.050159259] [30886]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: FrameDurationLimits = [ 100, 1000000000 ]
+[2:03:45.050293035] [30886]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AeMeteringMode = 0
+[2:03:45.050403626] [30886]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: NoiseReductionMode = 2
+Still capture image received
+ret1 successful
+/home/pi/Grad-Project/ImageProcessing/ImageHelpers/ImageHelpers.py:197: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  sequence = np.array(splitBoard(img, 'image', 'cells', False))
+temp =======================>>>> [12.454579   3.3704975  0.       ]
+model Output  :  0
+temp =======================>>>> [7.9687653 0.        0.       ]
+model Output  :  0
+temp =======================>>>> [13.455063   4.6441836  0.       ]
+model Output  :  0
+temp =======================>>>> [7.8773947 0.        0.       ]
+model Output  :  0
+temp =======================>>>> [13.180068  4.321895  0.      ]
+model Output  :  0
+temp =======================>>>> [7.6213593 0.        2.3426876]
+model Output  :  0
+temp =======================>>>> [ 0.        8.45291  20.250214]
+model Output  :  2
+temp =======================>>>> [6.3123217 0.        5.388945 ]
+model Output  :  0
+temp =======================>>>> [6.843848 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.606503   4.7555943  0.       ]
+model Output  :  0
+temp =======================>>>> [7.416659 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.049114   4.9426856  0.       ]
+model Output  :  0
+temp =======================>>>> [7.4514384  0.         0.61071086]
+model Output  :  0
+temp =======================>>>> [13.211326   4.1742887  0.       ]
+model Output  :  0
+temp =======================>>>> [7.6784096 0.        2.1245117]
+model Output  :  0
+temp =======================>>>> [12.664939   3.0853941  0.       ]
+model Output  :  0
+temp =======================>>>> [13.733052   4.1946425  0.       ]
+model Output  :  0
+temp =======================>>>> [7.4425926 0.        0.       ]
+model Output  :  0
+temp =======================>>>> [13.676797  5.411975  0.      ]
+model Output  :  0
+temp =======================>>>> [ 0.       34.48034   9.856743]
+model Output  :  1
+temp =======================>>>> [12.6005125  4.3659196  0.       ]
+model Output  :  0
+temp =======================>>>> [8.037331   0.         0.16065368]
+model Output  :  0
+temp =======================>>>> [13.229539  3.738739  0.      ]
+model Output  :  0
+temp =======================>>>> [7.8103976 0.        1.7954327]
+model Output  :  0
+temp =======================>>>> [7.1986303 0.        0.       ]
+model Output  :  0
+temp =======================>>>> [13.3253975  5.8689384  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.        22.474863   6.5753202]
+model Output  :  1
+temp =======================>>>> [13.586829   5.4862423  0.       ]
+model Output  :  0
+temp =======================>>>> [8.493342 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.49476    4.6595817  0.       ]
+model Output  :  0
+temp =======================>>>> [9.08743    0.         0.35976663]
+model Output  :  0
+temp =======================>>>> [13.123265   3.3061738  0.       ]
+model Output  :  0
+temp =======================>>>> [13.727737   5.1303096  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.       27.751919  8.492319]
+model Output  :  1
+temp =======================>>>> [13.43638   5.897026  0.      ]
+model Output  :  0
+temp =======================>>>> [8.295374 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.632501   4.9680037  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.        27.17333    3.8190186]
+model Output  :  1
+temp =======================>>>> [13.248935  4.085412  0.      ]
+model Output  :  0
+temp =======================>>>> [8.100243  0.        2.7413738]
+model Output  :  0
+temp =======================>>>> [7.2447424  0.         0.12429041]
+model Output  :  0
+temp =======================>>>> [13.1209135  6.1163216  0.       ]
+model Output  :  0
+temp =======================>>>> [8.078193 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [12.5742855  5.6919637  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.        25.486969   4.9597507]
+model Output  :  1
+temp =======================>>>> [13.480637   4.3090105  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.       30.638716  4.928434]
+model Output  :  1
+temp =======================>>>> [12.47122   3.552741  0.      ]
+model Output  :  0
+temp =======================>>>> [13.465065  4.990906  0.      ]
+model Output  :  0
+temp =======================>>>> [8.19396 0.      0.     ]
+model Output  :  0
+temp =======================>>>> [13.461142   5.1901574  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.      32.00514  2.62494]
+model Output  :  1
+temp =======================>>>> [13.239383   4.5885534  0.       ]
+model Output  :  0
+temp =======================>>>> [8.392281  0.        1.1441138]
+model Output  :  0
+temp =======================>>>> [12.99914   3.864022  0.      ]
+model Output  :  0
+temp =======================>>>> [8.54727  0.       2.726315]
+model Output  :  0
+temp =======================>>>> [8.23118    0.         0.39343295]
+model Output  :  0
+temp =======================>>>> [13.447332   4.7220316  0.       ]
+model Output  :  0
+temp =======================>>>> [8.956337 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [11.91225    5.8069205  0.       ]
+model Output  :  0
+temp =======================>>>> [9.853374 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.004173   3.9892635  0.       ]
+model Output  :  0
+temp =======================>>>> [9.324624  0.        1.3966041]
+model Output  :  0
+temp =======================>>>> [12.40666   3.218101  0.      ]
+model Output  :  0
+new board :
+['1', '1', '1', '1', '1', '1', 'k', '1']
+['1', '1', '1', '1', '1', '1', '1', '1']
+['1', '1', '1', 'R', '1', '1', '1', '1']
+['1', '1', 'P', '1', '1', '1', '1', '1']
+['1', 'P', '1', '1', '1', 'P', '1', '1']
+['1', '1', '1', '1', 'P', '1', 'P', '1']
+['1', '1', '1', 'K', '1', '1', '1', '1']
+['1', '1', '1', '1', '1', '1', '1', '1']
+Your move is :  b3b4
+next_move : g8g7
+. . . . . . . .
+. . . . . . k .
+. . . R . . . .
+. . P . . . . .
+. P . . . P . .
+. . . . P . P .
+. . . K . . . .
+. . . . . . . .
+AI Move :  g8g7
+Make your move : 
+10 secand lift.......
+[2:04:27.224748789] [31338]  INFO Camera camera_manager.cpp:293 libcamera v0.0.0+3548-a11d63f9
+[2:04:27.240447430] [31339] ERROR CameraSensor camera_sensor.cpp:591 'ov5647 10-0036': Camera sensor does not support test pattern modes.
+[2:04:27.258901977] [31339]  INFO RPI raspberrypi.cpp:1352 Registered camera /base/soc/i2c0mux/i2c@1/ov5647@36 to Unicam device /dev/media0 and ISP device /dev/media1
+[2:04:27.261468221] [31338]  INFO Camera camera.cpp:1029 configuring streams: (0) 1296x972-YUV420
+[2:04:27.261956233] [31339]  INFO RPI raspberrypi.cpp:760 Sensor: /base/soc/i2c0mux/i2c@1/ov5647@36 - Selected sensor format: 1296x972-SGBRG10_1X10 - Selected unicam format: 1296x972-pGAA
+[2:04:27.285999353] [31343]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Saturation = 1.000000
+[2:04:27.286174999] [31343]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Contrast = 1.000000
+[2:04:27.286238887] [31343]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Brightness = 0.000000
+[2:04:27.286277998] [31343]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AwbMode = 0
+[2:04:27.286311460] [31343]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Sharpness = 1.000000
+[2:04:27.286340015] [31343]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: ExposureValue = 0.000000
+[2:04:27.286398385] [31343]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AeExposureMode = 0
+[2:04:27.286423718] [31343]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: FrameDurationLimits = [ 33333, 33333 ]
+[2:04:27.286458162] [31343]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AeMeteringMode = 0
+[2:04:27.286483717] [31343]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: NoiseReductionMode = 3
+[2:04:32.421918856] [31338]  INFO Camera camera.cpp:1029 configuring streams: (0) 2592x1944-YUV420 (1) 2592x1944-SGBRG10_CSI2P
+[2:04:32.423137321] [31339]  INFO RPI raspberrypi.cpp:760 Sensor: /base/soc/i2c0mux/i2c@1/ov5647@36 - Selected sensor format: 2592x1944-SGBRG10_1X10 - Selected unicam format: 2592x1944-pGAA
+[2:04:32.514834791] [31346]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Saturation = 1.000000
+[2:04:32.514948511] [31346]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Contrast = 1.000000
+[2:04:32.514977344] [31346]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Brightness = 0.000000
+[2:04:32.515001696] [31346]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AwbMode = 0
+[2:04:32.515026936] [31346]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Sharpness = 1.000000
+[2:04:32.515051973] [31346]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: ExposureValue = 0.000000
+[2:04:32.515076454] [31346]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AeExposureMode = 0
+[2:04:32.515125305] [31346]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: FrameDurationLimits = [ 100, 1000000000 ]
+[2:04:32.515178434] [31346]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AeMeteringMode = 0
+[2:04:32.515203397] [31346]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: NoiseReductionMode = 2
+Still capture image received
+ret1 successful
+/home/pi/Grad-Project/ImageProcessing/ImageHelpers/ImageHelpers.py:197: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  sequence = np.array(splitBoard(img, 'image', 'cells', False))
+temp =======================>>>> [12.549151   3.4479034  0.       ]
+model Output  :  0
+temp =======================>>>> [8.073231 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.511484   4.7723227  0.       ]
+model Output  :  0
+temp =======================>>>> [7.8971043  0.         0.07454839]
+model Output  :  0
+temp =======================>>>> [13.439734   4.2751493  0.       ]
+model Output  :  0
+temp =======================>>>> [8.323173  0.        1.4804875]
+model Output  :  0
+temp =======================>>>> [11.615539   4.6681647  0.       ]
+model Output  :  0
+temp =======================>>>> [8.495983  0.        2.9571033]
+model Output  :  0
+temp =======================>>>> [7.546251 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.561986  4.919494  0.      ]
+model Output  :  0
+temp =======================>>>> [7.5602994 0.        0.       ]
+model Output  :  0
+temp =======================>>>> [13.054368   5.1681213  0.       ]
+model Output  :  0
+temp =======================>>>> [7.8329816  0.         0.28249064]
+model Output  :  0
+temp =======================>>>> [13.284786   4.3161545  0.       ]
+model Output  :  0
+temp =======================>>>> [5.810818 0.       7.086001]
+model Output  :  2
+temp =======================>>>> [9.571468 2.858332 0.      ]
+model Output  :  0
+temp =======================>>>> [13.798799   4.3697767  0.       ]
+model Output  :  0
+temp =======================>>>> [7.37586 0.      0.     ]
+model Output  :  0
+temp =======================>>>> [13.631115   5.7016387  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.       33.835846  9.130456]
+model Output  :  1
+temp =======================>>>> [12.505757  4.58759   0.      ]
+model Output  :  0
+temp =======================>>>> [8.139804   0.         0.16600582]
+model Output  :  0
+temp =======================>>>> [13.201509   4.0678005  0.       ]
+model Output  :  0
+temp =======================>>>> [8.404303  0.        1.3113959]
+model Output  :  0
+temp =======================>>>> [7.378197 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [ 4.8909783 16.452055   0.       ]
+model Output  :  1
+temp =======================>>>> [ 0.       23.130863  7.144664]
+model Output  :  1
+temp =======================>>>> [13.759999   5.4768796  0.       ]
+model Output  :  0
+temp =======================>>>> [8.619668 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.499356  4.85835   0.      ]
+model Output  :  0
+temp =======================>>>> [9.44264 0.      0.     ]
+model Output  :  0
+temp =======================>>>> [13.086507   3.5933173  0.       ]
+model Output  :  0
+temp =======================>>>> [13.784866   5.2419124  0.       ]
+model Output  :  0
+temp =======================>>>> [7.8353148 0.        0.       ]
+model Output  :  0
+temp =======================>>>> [13.4386     6.0586295  0.       ]
+model Output  :  0
+temp =======================>>>> [8.3168745 0.        0.       ]
+model Output  :  0
+temp =======================>>>> [13.773064   5.0061474  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.        27.37174    3.8266518]
+model Output  :  1
+temp =======================>>>> [13.435527   3.9299655  0.       ]
+model Output  :  0
+temp =======================>>>> [8.466218  0.        2.2953985]
+model Output  :  0
+temp =======================>>>> [7.6035857 0.        0.       ]
+model Output  :  0
+temp =======================>>>> [12.99964   6.381109  0.      ]
+model Output  :  0
+temp =======================>>>> [8.317503 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [12.633231   5.7849736  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.        25.265495   5.4048915]
+model Output  :  1
+temp =======================>>>> [13.585055   4.4092803  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.        30.03949    5.3095207]
+model Output  :  1
+temp =======================>>>> [12.705711  3.478728  0.      ]
+model Output  :  0
+temp =======================>>>> [13.464732   5.1340733  0.       ]
+model Output  :  0
+temp =======================>>>> [8.418776 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.508513  5.429186  0.      ]
+model Output  :  0
+temp =======================>>>> [ 0.        32.37594    3.4864588]
+model Output  :  1
+temp =======================>>>> [13.146865  4.780451  0.      ]
+model Output  :  0
+temp =======================>>>> [8.388407  0.        1.4683447]
+model Output  :  0
+temp =======================>>>> [13.176121   3.7954464  0.       ]
+model Output  :  0
+temp =======================>>>> [9.144025  0.        2.3043551]
+model Output  :  0
+temp =======================>>>> [8.5447     0.         0.06530204]
+model Output  :  0
+temp =======================>>>> [13.41453    4.9915247  0.       ]
+model Output  :  0
+temp =======================>>>> [9.258014 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [11.937263   6.1322584  0.       ]
+model Output  :  0
+temp =======================>>>> [10.360099  0.        0.      ]
+model Output  :  0
+temp =======================>>>> [13.153228   3.9402099  0.       ]
+model Output  :  0
+temp =======================>>>> [9.642037  0.        1.3418242]
+model Output  :  0
+temp =======================>>>> [12.491002   3.2981372  0.       ]
+model Output  :  0
+new board :
+['1', '1', '1', '1', '1', '1', '1', '1']
+['1', '1', '1', '1', '1', '1', 'k', '1']
+['1', '1', '1', 'R', '1', '1', '1', '1']
+['1', 'P', 'P', '1', '1', '1', '1', '1']
+['1', '1', '1', '1', '1', 'P', '1', '1']
+['1', '1', '1', '1', 'P', '1', 'P', '1']
+['1', '1', '1', 'K', '1', '1', '1', '1']
+['1', '1', '1', '1', '1', '1', '1', '1']
+Your move is :  b4b5
+next_move : g7g8
+. . . . . . k .
+. . . . . . . .
+. . . R . . . .
+. P P . . . . .
+. . . . . P . .
+. . . . P . P .
+. . . K . . . .
+. . . . . . . .
+AI Move :  g7g8
+Make your move : 
+10 secand lift.......
+[2:05:14.657486571] [31799]  INFO Camera camera_manager.cpp:293 libcamera v0.0.0+3548-a11d63f9
+[2:05:14.673185693] [31800] ERROR CameraSensor camera_sensor.cpp:591 'ov5647 10-0036': Camera sensor does not support test pattern modes.
+[2:05:14.690814660] [31800]  INFO RPI raspberrypi.cpp:1352 Registered camera /base/soc/i2c0mux/i2c@1/ov5647@36 to Unicam device /dev/media0 and ISP device /dev/media1
+[2:05:14.691526687] [31799]  INFO Camera camera.cpp:1029 configuring streams: (0) 1296x972-YUV420
+[2:05:14.691821831] [31800]  INFO RPI raspberrypi.cpp:760 Sensor: /base/soc/i2c0mux/i2c@1/ov5647@36 - Selected sensor format: 1296x972-SGBRG10_1X10 - Selected unicam format: 1296x972-pGAA
+[2:05:14.714907910] [31804]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Saturation = 1.000000
+[2:05:14.715018168] [31804]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Contrast = 1.000000
+[2:05:14.715046612] [31804]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Brightness = 0.000000
+[2:05:14.715072945] [31804]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AwbMode = 0
+[2:05:14.715101148] [31804]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Sharpness = 1.000000
+[2:05:14.715128481] [31804]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: ExposureValue = 0.000000
+[2:05:14.715173481] [31804]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AeExposureMode = 0
+[2:05:14.715197406] [31804]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: FrameDurationLimits = [ 33333, 33333 ]
+[2:05:14.715226332] [31804]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AeMeteringMode = 0
+[2:05:14.715248757] [31804]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: NoiseReductionMode = 3
+[2:05:19.850610638] [31799]  INFO Camera camera.cpp:1029 configuring streams: (0) 2592x1944-YUV420 (1) 2592x1944-SGBRG10_CSI2P
+[2:05:19.851802363] [31800]  INFO RPI raspberrypi.cpp:760 Sensor: /base/soc/i2c0mux/i2c@1/ov5647@36 - Selected sensor format: 2592x1944-SGBRG10_1X10 - Selected unicam format: 2592x1944-pGAA
+[2:05:19.943525519] [31807]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Saturation = 1.000000
+[2:05:19.943727868] [31807]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Contrast = 1.000000
+[2:05:19.943791497] [31807]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Brightness = 0.000000
+[2:05:19.943850070] [31807]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AwbMode = 0
+[2:05:19.943905180] [31807]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Sharpness = 1.000000
+[2:05:19.943962661] [31807]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: ExposureValue = 0.000000
+[2:05:19.944086474] [31807]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AeExposureMode = 0
+[2:05:19.944166103] [31807]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: FrameDurationLimits = [ 100, 1000000000 ]
+[2:05:19.944230028] [31807]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AeMeteringMode = 0
+[2:05:19.944283120] [31807]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: NoiseReductionMode = 2
+Still capture image received
+ret1 successful
+/home/pi/Grad-Project/ImageProcessing/ImageHelpers/ImageHelpers.py:197: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  sequence = np.array(splitBoard(img, 'image', 'cells', False))
+temp =======================>>>> [12.306359   3.3975298  0.       ]
+model Output  :  0
+temp =======================>>>> [7.925385 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.467345  4.585878  0.      ]
+model Output  :  0
+temp =======================>>>> [7.712882   0.         0.04728192]
+model Output  :  0
+temp =======================>>>> [13.245755  4.122422  0.      ]
+model Output  :  0
+temp =======================>>>> [7.5385857 0.        2.6195514]
+model Output  :  0
+temp =======================>>>> [ 0.       13.724532 22.251495]
+model Output  :  2
+temp =======================>>>> [5.696937  0.        6.7752995]
+model Output  :  2
+temp =======================>>>> [7.2137666 0.        0.       ]
+model Output  :  0
+temp =======================>>>> [13.608376   4.7354317  0.       ]
+model Output  :  0
+temp =======================>>>> [7.287761 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.014768  4.924051  0.      ]
+model Output  :  0
+temp =======================>>>> [7.558102   0.         0.48373386]
+model Output  :  0
+temp =======================>>>> [13.257101  4.034988  0.      ]
+model Output  :  0
+temp =======================>>>> [7.487293  0.        2.2417712]
+model Output  :  0
+temp =======================>>>> [12.827843   2.9817896  0.       ]
+model Output  :  0
+temp =======================>>>> [13.715478  4.264511  0.      ]
+model Output  :  0
+temp =======================>>>> [ 0.       22.568739  8.968341]
+model Output  :  1
+temp =======================>>>> [13.846127   5.2884364  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.       34.83718  10.125287]
+model Output  :  1
+temp =======================>>>> [12.537351   4.3584266  0.       ]
+model Output  :  0
+temp =======================>>>> [7.645468   0.         0.42250797]
+model Output  :  0
+temp =======================>>>> [13.32484    3.6137834  0.       ]
+model Output  :  0
+temp =======================>>>> [7.9704857 0.        1.7284949]
+model Output  :  0
+temp =======================>>>> [7.0849714 0.        0.       ]
+model Output  :  0
+temp =======================>>>> [13.290804   5.9825687  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.      23.43275  6.88204]
+model Output  :  1
+temp =======================>>>> [13.613507  5.505249  0.      ]
+model Output  :  0
+temp =======================>>>> [8.126187 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.411189   4.7520704  0.       ]
+model Output  :  0
+temp =======================>>>> [9.011568 0.       0.53651 ]
+model Output  :  0
+temp =======================>>>> [13.176052   3.2988656  0.       ]
+model Output  :  0
+temp =======================>>>> [13.724104   5.0637293  0.       ]
+model Output  :  0
+temp =======================>>>> [7.757192 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.4852705  5.7956085  0.       ]
+model Output  :  0
+temp =======================>>>> [7.856887 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.624397   4.9173493  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.        27.155725   4.0537977]
+model Output  :  1
+temp =======================>>>> [13.415486  3.888952  0.      ]
+model Output  :  0
+temp =======================>>>> [8.090553  0.        2.3789284]
+model Output  :  0
+temp =======================>>>> [7.074207   0.         0.33639076]
+model Output  :  0
+temp =======================>>>> [13.112315   6.0015025  0.       ]
+model Output  :  0
+temp =======================>>>> [8.025377 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [12.564462   5.6273694  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.       25.751549  5.291885]
+model Output  :  1
+temp =======================>>>> [13.333619  4.442849  0.      ]
+model Output  :  0
+temp =======================>>>> [ 0.        30.853495   5.1585464]
+model Output  :  1
+temp =======================>>>> [12.4491005  3.5748246  0.       ]
+model Output  :  0
+temp =======================>>>> [13.406414   4.9841547  0.       ]
+model Output  :  0
+temp =======================>>>> [7.6610336  0.         0.22994617]
+model Output  :  0
+temp =======================>>>> [13.579006  5.09246   0.      ]
+model Output  :  0
+temp =======================>>>> [ 0.        32.07583    3.2664843]
+model Output  :  1
+temp =======================>>>> [13.329874  4.50504   0.      ]
+model Output  :  0
+temp =======================>>>> [8.174594  0.        1.3685392]
+model Output  :  0
+temp =======================>>>> [13.0087595  3.8194394  0.       ]
+model Output  :  0
+temp =======================>>>> [8.81919   0.        2.2255993]
+model Output  :  0
+temp =======================>>>> [8.27292    0.         0.37253103]
+model Output  :  0
+temp =======================>>>> [13.334349   4.7754164  0.       ]
+model Output  :  0
+temp =======================>>>> [8.780579 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [11.833047  5.908549  0.      ]
+model Output  :  0
+temp =======================>>>> [9.798986 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.146303  3.821327  0.      ]
+model Output  :  0
+temp =======================>>>> [8.808065  0.        1.8095089]
+model Output  :  0
+temp =======================>>>> [12.319826   3.2346456  0.       ]
+model Output  :  0
+new board :
+['1', '1', '1', '1', '1', '1', 'k', '1']
+['1', '1', '1', '1', '1', '1', '1', '1']
+['1', 'P', '1', 'R', '1', '1', '1', '1']
+['1', '1', 'P', '1', '1', '1', '1', '1']
+['1', '1', '1', '1', '1', 'P', '1', '1']
+['1', '1', '1', '1', 'P', '1', 'P', '1']
+['1', '1', '1', 'K', '1', '1', '1', '1']
+['1', '1', '1', '1', '1', '1', '1', '1']
+Your move is :  b5b6
+next_move : g8f8
+. . . . . k . .
+. . . . . . . .
+. P . R . . . .
+. . P . . . . .
+. . . . . P . .
+. . . . P . P .
+. . . K . . . .
+. . . . . . . .
+AI Move :  g8f8
+Make your move : 
+10 secand lift.......
+[2:06:02.042510621] [32273]  INFO Camera camera_manager.cpp:293 libcamera v0.0.0+3548-a11d63f9
+[2:06:02.060635989] [32274] ERROR CameraSensor camera_sensor.cpp:591 'ov5647 10-0036': Camera sensor does not support test pattern modes.
+[2:06:02.081075844] [32274]  INFO RPI raspberrypi.cpp:1352 Registered camera /base/soc/i2c0mux/i2c@1/ov5647@36 to Unicam device /dev/media0 and ISP device /dev/media1
+[2:06:02.081941796] [32273]  INFO Camera camera.cpp:1029 configuring streams: (0) 1296x972-YUV420
+[2:06:02.082344142] [32274]  INFO RPI raspberrypi.cpp:760 Sensor: /base/soc/i2c0mux/i2c@1/ov5647@36 - Selected sensor format: 1296x972-SGBRG10_1X10 - Selected unicam format: 1296x972-pGAA
+[2:06:02.104343551] [32278]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Saturation = 1.000000
+[2:06:02.104579048] [32278]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Contrast = 1.000000
+[2:06:02.104640973] [32278]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Brightness = 0.000000
+[2:06:02.104692416] [32278]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AwbMode = 0
+[2:06:02.104743416] [32278]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Sharpness = 1.000000
+[2:06:02.104794674] [32278]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: ExposureValue = 0.000000
+[2:06:02.104870507] [32278]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AeExposureMode = 0
+[2:06:02.104919636] [32278]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: FrameDurationLimits = [ 33333, 33333 ]
+[2:06:02.104974672] [32278]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AeMeteringMode = 0
+[2:06:02.105016356] [32278]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: NoiseReductionMode = 3
+[2:06:07.241475304] [32273]  INFO Camera camera.cpp:1029 configuring streams: (0) 2592x1944-YUV420 (1) 2592x1944-SGBRG10_CSI2P
+[2:06:07.245233587] [32274]  INFO RPI raspberrypi.cpp:760 Sensor: /base/soc/i2c0mux/i2c@1/ov5647@36 - Selected sensor format: 2592x1944-SGBRG10_1X10 - Selected unicam format: 2592x1944-pGAA
+[2:06:07.351851545] [32281]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Saturation = 1.000000
+[2:06:07.351966155] [32281]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Contrast = 1.000000
+[2:06:07.351993414] [32281]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Brightness = 0.000000
+[2:06:07.352046487] [32281]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AwbMode = 0
+[2:06:07.352070061] [32281]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Sharpness = 1.000000
+[2:06:07.352094079] [32281]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: ExposureValue = 0.000000
+[2:06:07.352118208] [32281]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AeExposureMode = 0
+[2:06:07.352140727] [32281]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: FrameDurationLimits = [ 100, 1000000000 ]
+[2:06:07.352170023] [32281]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AeMeteringMode = 0
+[2:06:07.352193448] [32281]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: NoiseReductionMode = 2
+Still capture image received
+ret1 successful
+/home/pi/Grad-Project/ImageProcessing/ImageHelpers/ImageHelpers.py:197: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  sequence = np.array(splitBoard(img, 'image', 'cells', False))
+temp =======================>>>> [12.469988   3.3866608  0.       ]
+model Output  :  0
+temp =======================>>>> [7.52292 0.      0.     ]
+model Output  :  0
+temp =======================>>>> [13.465048  4.710222  0.      ]
+model Output  :  0
+temp =======================>>>> [7.623771   0.         0.09668592]
+model Output  :  0
+temp =======================>>>> [13.273589   4.2924156  0.       ]
+model Output  :  0
+temp =======================>>>> [4.301688 0.       9.306615]
+model Output  :  2
+temp =======================>>>> [11.332435   1.7660625  0.       ]
+model Output  :  0
+temp =======================>>>> [8.073805  0.        3.0672214]
+model Output  :  0
+temp =======================>>>> [7.0198646 0.        0.       ]
+model Output  :  0
+temp =======================>>>> [ 6.1315074 16.369804   0.       ]
+model Output  :  1
+temp =======================>>>> [7.314581 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.075011   4.8989453  0.       ]
+model Output  :  0
+temp =======================>>>> [7.2896414 0.        0.8794131]
+model Output  :  0
+temp =======================>>>> [13.364888   4.0451307  0.       ]
+model Output  :  0
+temp =======================>>>> [7.874703  0.        1.9380131]
+model Output  :  0
+temp =======================>>>> [12.829535  3.081574  0.      ]
+model Output  :  0
+temp =======================>>>> [13.806886  4.242572  0.      ]
+model Output  :  0
+temp =======================>>>> [7.2180214 0.        0.       ]
+model Output  :  0
+temp =======================>>>> [13.688685  5.472185  0.      ]
+model Output  :  0
+temp =======================>>>> [ 0.       33.394802  9.452109]
+model Output  :  1
+temp =======================>>>> [12.641549   4.2796326  0.       ]
+model Output  :  0
+temp =======================>>>> [7.860967   0.         0.17023423]
+model Output  :  0
+temp =======================>>>> [13.167921   3.9561682  0.       ]
+model Output  :  0
+temp =======================>>>> [8.105816  0.        1.4443945]
+model Output  :  0
+temp =======================>>>> [7.2182083 0.        0.       ]
+model Output  :  0
+temp =======================>>>> [13.238856   6.0326457  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.        23.504156   6.9849377]
+model Output  :  1
+temp =======================>>>> [13.69654    5.4505835  0.       ]
+model Output  :  0
+temp =======================>>>> [8.304158 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.469895  4.716053  0.      ]
+model Output  :  0
+temp =======================>>>> [8.973014   0.         0.21475032]
+model Output  :  0
+temp =======================>>>> [13.101374  3.486812  0.      ]
+model Output  :  0
+temp =======================>>>> [13.746591   5.1484675  0.       ]
+model Output  :  0
+temp =======================>>>> [7.494054 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.368232  5.969868  0.      ]
+model Output  :  0
+temp =======================>>>> [8.201897 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.665457  5.011254  0.      ]
+model Output  :  0
+temp =======================>>>> [ 0.        27.541664   3.9481645]
+model Output  :  1
+temp =======================>>>> [13.35115    3.9172673  0.       ]
+model Output  :  0
+temp =======================>>>> [8.174515  0.        2.1948414]
+model Output  :  0
+temp =======================>>>> [7.3728776 0.        0.       ]
+model Output  :  0
+temp =======================>>>> [13.102728   6.1191454  0.       ]
+model Output  :  0
+temp =======================>>>> [8.002764 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [12.561216   5.7406425  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.       25.918686  5.529339]
+model Output  :  1
+temp =======================>>>> [13.404123   4.4162927  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.       30.618694  5.045243]
+model Output  :  1
+temp =======================>>>> [12.555115   3.5207713  0.       ]
+model Output  :  0
+temp =======================>>>> [13.391021  5.076273  0.      ]
+model Output  :  0
+temp =======================>>>> [8.028766 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.544845   5.2142267  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.        32.80909    3.3301222]
+model Output  :  1
+temp =======================>>>> [13.230666   4.6327124  0.       ]
+model Output  :  0
+temp =======================>>>> [8.324748  0.        1.1111876]
+model Output  :  0
+temp =======================>>>> [13.115679  3.823196  0.      ]
+model Output  :  0
+temp =======================>>>> [8.727038  0.        2.5761085]
+model Output  :  0
+temp =======================>>>> [8.19208    0.         0.38905808]
+model Output  :  0
+temp =======================>>>> [13.349179   4.9203806  0.       ]
+model Output  :  0
+temp =======================>>>> [8.784359 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [12.002538  5.882995  0.      ]
+model Output  :  0
+temp =======================>>>> [9.845422 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.064877  3.973115  0.      ]
+model Output  :  0
+temp =======================>>>> [9.404628  0.        1.1288095]
+model Output  :  0
+temp =======================>>>> [12.51053    3.1810417  0.       ]
+model Output  :  0
+new board :
+['1', '1', '1', '1', '1', 'k', '1', '1']
+['1', 'P', '1', '1', '1', '1', '1', '1']
+['1', '1', '1', 'R', '1', '1', '1', '1']
+['1', '1', 'P', '1', '1', '1', '1', '1']
+['1', '1', '1', '1', '1', 'P', '1', '1']
+['1', '1', '1', '1', 'P', '1', 'P', '1']
+['1', '1', '1', 'K', '1', '1', '1', '1']
+['1', '1', '1', '1', '1', '1', '1', '1']
+Your move is :  b6b7
+next_move : f8g8
+. . . . . . k .
+. P . . . . . .
+. . . R . . . .
+. . P . . . . .
+. . . . . P . .
+. . . . P . P .
+. . . K . . . .
+. . . . . . . .
+AI Move :  f8g8
+Make your move : 
+10 secand lift.......
+[2:06:49.518304235] [32733]  INFO Camera camera_manager.cpp:293 libcamera v0.0.0+3548-a11d63f9
+[2:06:49.534163504] [32734] ERROR CameraSensor camera_sensor.cpp:591 'ov5647 10-0036': Camera sensor does not support test pattern modes.
+[2:06:49.552309445] [32734]  INFO RPI raspberrypi.cpp:1352 Registered camera /base/soc/i2c0mux/i2c@1/ov5647@36 to Unicam device /dev/media0 and ISP device /dev/media1
+[2:06:49.553113731] [32733]  INFO Camera camera.cpp:1029 configuring streams: (0) 1296x972-YUV420
+[2:06:49.553570855] [32734]  INFO RPI raspberrypi.cpp:760 Sensor: /base/soc/i2c0mux/i2c@1/ov5647@36 - Selected sensor format: 1296x972-SGBRG10_1X10 - Selected unicam format: 1296x972-pGAA
+[2:06:49.583615600] [32738]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Saturation = 1.000000
+[2:06:49.583719580] [32738]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Contrast = 1.000000
+[2:06:49.584190574] [32738]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Brightness = 0.000000
+[2:06:49.584415663] [32738]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AwbMode = 0
+[2:06:49.584588717] [32738]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Sharpness = 1.000000
+[2:06:49.584753548] [32738]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: ExposureValue = 0.000000
+[2:06:49.584944638] [32738]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AeExposureMode = 0
+[2:06:49.585110450] [32738]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: FrameDurationLimits = [ 33333, 33333 ]
+[2:06:49.585283800] [32738]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AeMeteringMode = 0
+[2:06:49.585443113] [32738]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: NoiseReductionMode = 3
+[2:06:54.721740451] [32733]  INFO Camera camera.cpp:1029 configuring streams: (0) 2592x1944-YUV420 (1) 2592x1944-SGBRG10_CSI2P
+[2:06:54.723044989] [32734]  INFO RPI raspberrypi.cpp:760 Sensor: /base/soc/i2c0mux/i2c@1/ov5647@36 - Selected sensor format: 2592x1944-SGBRG10_1X10 - Selected unicam format: 2592x1944-pGAA
+[2:06:54.817962365] [32741]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Saturation = 1.000000
+[2:06:54.818114863] [32741]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Contrast = 1.000000
+[2:06:54.818159418] [32741]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Brightness = 0.000000
+[2:06:54.818214695] [32741]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AwbMode = 0
+[2:06:54.818264953] [32741]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: Sharpness = 1.000000
+[2:06:54.818309342] [32741]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: ExposureValue = 0.000000
+[2:06:54.818351693] [32741]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AeExposureMode = 0
+[2:06:54.818393915] [32741]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: FrameDurationLimits = [ 100, 1000000000 ]
+[2:06:54.818446229] [32741]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: AeMeteringMode = 0
+[2:06:54.818487636] [32741]  INFO IPARPI raspberrypi.cpp:635 Request ctrl: NoiseReductionMode = 2
+Still capture image received
+ret1 successful
+/home/pi/Grad-Project/ImageProcessing/ImageHelpers/ImageHelpers.py:197: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  sequence = np.array(splitBoard(img, 'image', 'cells', False))
+temp =======================>>>> [12.485636  3.492966  0.      ]
+model Output  :  0
+temp =======================>>>> [ 0.09143825 26.209623    0.        ]
+model Output  :  1
+temp =======================>>>> [13.426828  4.458311  0.      ]
+model Output  :  0
+temp =======================>>>> [7.6839523 0.        0.       ]
+model Output  :  0
+temp =======================>>>> [13.203008   4.4299607  0.       ]
+model Output  :  0
+temp =======================>>>> [7.6606674 0.        2.2636292]
+model Output  :  0
+temp =======================>>>> [ 0.        8.985548 18.530577]
+model Output  :  2
+temp =======================>>>> [6.168088  0.        5.6694365]
+model Output  :  0
+temp =======================>>>> [7.0379443 0.        0.       ]
+model Output  :  0
+temp =======================>>>> [13.727983   4.7043242  0.       ]
+model Output  :  0
+temp =======================>>>> [7.320413 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.170072  4.855616  0.      ]
+model Output  :  0
+temp =======================>>>> [7.3797493  0.         0.48185346]
+model Output  :  0
+temp =======================>>>> [13.3092575  4.035448   0.       ]
+model Output  :  0
+temp =======================>>>> [7.6227407 0.        2.3400886]
+model Output  :  0
+temp =======================>>>> [12.828945   2.9427545  0.       ]
+model Output  :  0
+temp =======================>>>> [13.574476  4.562313  0.      ]
+model Output  :  0
+temp =======================>>>> [7.397059 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.748144  5.50788   0.      ]
+model Output  :  0
+temp =======================>>>> [ 0.       34.851448 10.051154]
+model Output  :  1
+temp =======================>>>> [12.564188   4.4454226  0.       ]
+model Output  :  0
+temp =======================>>>> [8.060838 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.084427  3.957039  0.      ]
+model Output  :  0
+temp =======================>>>> [8.083315  0.        1.6867791]
+model Output  :  0
+temp =======================>>>> [7.226502 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.445057   5.7940016  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.        23.102934   6.8466816]
+model Output  :  1
+temp =======================>>>> [13.70328    5.5087013  0.       ]
+model Output  :  0
+temp =======================>>>> [8.227885 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.403061   4.8092237  0.       ]
+model Output  :  0
+temp =======================>>>> [8.945735  0.        0.3683963]
+model Output  :  0
+temp =======================>>>> [13.194356   3.3257613  0.       ]
+model Output  :  0
+temp =======================>>>> [13.782486  5.109351  0.      ]
+model Output  :  0
+temp =======================>>>> [7.6891274 0.        0.       ]
+model Output  :  0
+temp =======================>>>> [13.538331  5.758296  0.      ]
+model Output  :  0
+temp =======================>>>> [8.060635 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.650331  4.977524  0.      ]
+model Output  :  0
+temp =======================>>>> [ 0.       27.210726  4.01464 ]
+model Output  :  1
+temp =======================>>>> [13.367477   3.9614103  0.       ]
+model Output  :  0
+temp =======================>>>> [8.5118065 0.        2.053476 ]
+model Output  :  0
+temp =======================>>>> [7.2857957  0.         0.06103048]
+model Output  :  0
+temp =======================>>>> [13.0413885  6.195797   0.       ]
+model Output  :  0
+temp =======================>>>> [8.239484 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [12.548019  5.685726  0.      ]
+model Output  :  0
+temp =======================>>>> [ 0.        25.827463   5.6483917]
+model Output  :  1
+temp =======================>>>> [13.447167   4.4400654  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.       30.901537  5.212702]
+model Output  :  1
+temp =======================>>>> [12.497407   3.6127443  0.       ]
+model Output  :  0
+temp =======================>>>> [13.472598   5.0421968  0.       ]
+model Output  :  0
+temp =======================>>>> [8.06791    0.         0.13845578]
+model Output  :  0
+temp =======================>>>> [13.615277   5.0645466  0.       ]
+model Output  :  0
+temp =======================>>>> [ 0.        32.180458   3.3448186]
+model Output  :  1
+temp =======================>>>> [13.244093   4.6037455  0.       ]
+model Output  :  0
+temp =======================>>>> [8.3296175 0.        1.4402919]
+model Output  :  0
+temp =======================>>>> [13.11359    3.7599134  0.       ]
+model Output  :  0
+temp =======================>>>> [9.199187  0.        1.8539181]
+model Output  :  0
+temp =======================>>>> [8.238516  0.        0.1554834]
+model Output  :  0
+temp =======================>>>> [13.372227  4.878156  0.      ]
+model Output  :  0
+temp =======================>>>> [8.804564 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [11.975202  5.891229  0.      ]
+model Output  :  0
+temp =======================>>>> [9.762488 0.       0.      ]
+model Output  :  0
+temp =======================>>>> [13.093188   3.9337337  0.       ]
+model Output  :  0
+temp =======================>>>> [9.317613  0.        1.1885972]
+model Output  :  0
+temp =======================>>>> [12.330384  3.380034  0.      ]
+model Output  :  0
+new board :
+['1', 'P', '1', '1', '1', '1', 'k', '1']
+['1', '1', '1', '1', '1', '1', '1', '1']
+['1', '1', '1', 'R', '1', '1', '1', '1']
+['1', '1', 'P', '1', '1', '1', '1', '1']
+['1', '1', '1', '1', '1', 'P', '1', '1']
+['1', '1', '1', '1', 'P', '1', 'P', '1']
+['1', '1', '1', 'K', '1', '1', '1', '1']
+['1', '1', '1', '1', '1', '1', '1', '1']
+Your move is :  b7b8
+Traceback (most recent call last):
+  File "/home/pi/Grad-Project/main.py", line 35, in <module>
+    eng.MakeMove(board,HumanMove)
+  File "/home/pi/Grad-Project/ChessEngine/WCRAchessEngine/ChessEngine.py", line 31, in MakeMove
+    game_state.push_san(str(Move))
+  File "/home/pi/.local/lib/python3.9/site-packages/chess/__init__.py", line 3032, in push_san
+    move = self.parse_san(san)
+  File "/home/pi/.local/lib/python3.9/site-packages/chess/__init__.py", line 3003, in parse_san
+    raise ValueError(f"missing promotion piece type: {san!r} in {self.fen()}")
+ValueError: missing promotion piece type: 'b7b8' in 6k1/1P6/3R4/2P5/5P2/4P1P1/3K4/8 w - - 1 50
+
