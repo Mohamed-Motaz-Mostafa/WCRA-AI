@@ -1,0 +1,244 @@
+2022-04-25 04:38:20.852232: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'cudart64_110.dll'; dlerror: cudart64_110.dll not found
+2022-04-25 04:38:20.853929: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+file loaded
+file headers:  ['dataShuffeled', 'lableShuffeled']
+data splitted
+data shape:  (15066, 190, 190, 3)
+data normalized
+2022-04-25 04:44:40.003441: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'nvcuda.dll'; dlerror: nvcuda.dll not found
+2022-04-25 04:44:40.005278: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2022-04-25 04:44:40.038082: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: DESKTOP-L4CUO3N
+2022-04-25 04:44:40.045524: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: DESKTOP-L4CUO3N
+2022-04-25 04:44:40.068891: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv2d (Conv2D)             (None, 188, 188, 3)       84
+
+ max_pooling2d (MaxPooling2D  (None, 37, 37, 3)        0
+ )
+
+ conv2d_1 (Conv2D)           (None, 35, 35, 3)         84
+
+ max_pooling2d_1 (MaxPooling  (None, 17, 17, 3)        0
+ 2D)
+
+ flatten (Flatten)           (None, 867)               0
+
+ dense (Dense)               (None, 100)               86800
+
+ dense_1 (Dense)             (None, 3)                 303
+
+=================================================================
+Total params: 87,271
+Trainable params: 87,271
+Non-trainable params: 0
+_________________________________________________________________
+None
+C:\ProgramData\Anaconda3\lib\site-packages\keras\optimizer_v2\adam.py:105: UserWarning: The `lr` argument is deprecated, use `learning_rate` instead.
+  super(Adam, self).__init__(name, **kwargs)
+Epoch 1/100
+101/101 - 161s - loss: 0.9796 - accuracy: 0.4653 - 161s/epoch - 2s/step
+Epoch 2/100
+101/101 - 133s - loss: 0.7743 - accuracy: 0.6139 - 133s/epoch - 1s/step
+Epoch 3/100
+101/101 - 142s - loss: 0.7367 - accuracy: 0.6975 - 142s/epoch - 1s/step
+Epoch 4/100
+101/101 - 145s - loss: 0.7064 - accuracy: 0.7408 - 145s/epoch - 1s/step
+Epoch 5/100
+101/101 - 127s - loss: 0.6729 - accuracy: 0.7920 - 127s/epoch - 1s/step
+Epoch 6/100
+101/101 - 127s - loss: 0.6230 - accuracy: 0.8530 - 127s/epoch - 1s/step
+Epoch 7/100
+101/101 - 131s - loss: 0.2176 - accuracy: 0.9404 - 131s/epoch - 1s/step
+Epoch 8/100
+101/101 - 131s - loss: 0.1576 - accuracy: 0.9550 - 131s/epoch - 1s/step
+Epoch 9/100
+101/101 - 129s - loss: 0.1390 - accuracy: 0.9599 - 129s/epoch - 1s/step
+Epoch 10/100
+101/101 - 136s - loss: 0.1264 - accuracy: 0.9624 - 136s/epoch - 1s/step
+Epoch 11/100
+101/101 - 129s - loss: 0.1171 - accuracy: 0.9659 - 129s/epoch - 1s/step
+Epoch 12/100
+101/101 - 156s - loss: 0.1077 - accuracy: 0.9682 - 156s/epoch - 2s/step
+Epoch 13/100
+101/101 - 236s - loss: 0.0993 - accuracy: 0.9716 - 236s/epoch - 2s/step
+Epoch 14/100
+101/101 - 184s - loss: 0.0933 - accuracy: 0.9738 - 184s/epoch - 2s/step
+Epoch 15/100
+101/101 - 160s - loss: 0.0867 - accuracy: 0.9761 - 160s/epoch - 2s/step
+Epoch 16/100
+101/101 - 132s - loss: 0.0812 - accuracy: 0.9780 - 132s/epoch - 1s/step
+Epoch 17/100
+101/101 - 155s - loss: 0.0767 - accuracy: 0.9786 - 155s/epoch - 2s/step
+Epoch 18/100
+101/101 - 145s - loss: 0.0744 - accuracy: 0.9794 - 145s/epoch - 1s/step
+Epoch 19/100
+101/101 - 140s - loss: 0.0685 - accuracy: 0.9806 - 140s/epoch - 1s/step
+Epoch 20/100
+101/101 - 134s - loss: 0.0655 - accuracy: 0.9812 - 134s/epoch - 1s/step
+Epoch 21/100
+101/101 - 141s - loss: 0.0632 - accuracy: 0.9817 - 141s/epoch - 1s/step
+Epoch 22/100
+101/101 - 139s - loss: 0.0614 - accuracy: 0.9830 - 139s/epoch - 1s/step
+Epoch 23/100
+101/101 - 142s - loss: 0.0599 - accuracy: 0.9820 - 142s/epoch - 1s/step
+Epoch 24/100
+101/101 - 130s - loss: 0.0571 - accuracy: 0.9836 - 130s/epoch - 1s/step
+Epoch 25/100
+101/101 - 129s - loss: 0.0559 - accuracy: 0.9837 - 129s/epoch - 1s/step
+Epoch 26/100
+101/101 - 134s - loss: 0.0566 - accuracy: 0.9829 - 134s/epoch - 1s/step
+Epoch 27/100
+101/101 - 134s - loss: 0.0521 - accuracy: 0.9851 - 134s/epoch - 1s/step
+Epoch 28/100
+101/101 - 145s - loss: 0.0498 - accuracy: 0.9850 - 145s/epoch - 1s/step
+Epoch 29/100
+101/101 - 135s - loss: 0.0521 - accuracy: 0.9845 - 135s/epoch - 1s/step
+Epoch 30/100
+101/101 - 134s - loss: 0.0476 - accuracy: 0.9864 - 134s/epoch - 1s/step
+Epoch 31/100
+101/101 - 131s - loss: 0.0488 - accuracy: 0.9863 - 131s/epoch - 1s/step
+Epoch 32/100
+101/101 - 144s - loss: 0.0467 - accuracy: 0.9864 - 144s/epoch - 1s/step
+Epoch 33/100
+101/101 - 143s - loss: 0.0456 - accuracy: 0.9866 - 143s/epoch - 1s/step
+Epoch 34/100
+101/101 - 147s - loss: 0.0442 - accuracy: 0.9873 - 147s/epoch - 1s/step
+Epoch 35/100
+101/101 - 151s - loss: 0.0425 - accuracy: 0.9878 - 151s/epoch - 1s/step
+Epoch 36/100
+101/101 - 141s - loss: 0.0425 - accuracy: 0.9883 - 141s/epoch - 1s/step
+Epoch 37/100
+101/101 - 148s - loss: 0.0412 - accuracy: 0.9889 - 148s/epoch - 1s/step
+Epoch 38/100
+101/101 - 143s - loss: 0.0414 - accuracy: 0.9877 - 143s/epoch - 1s/step
+Epoch 39/100
+101/101 - 154s - loss: 0.0403 - accuracy: 0.9878 - 154s/epoch - 2s/step
+Epoch 40/100
+101/101 - 145s - loss: 0.0392 - accuracy: 0.9878 - 145s/epoch - 1s/step
+Epoch 41/100
+101/101 - 146s - loss: 0.0441 - accuracy: 0.9861 - 146s/epoch - 1s/step
+Epoch 42/100
+101/101 - 143s - loss: 0.0391 - accuracy: 0.9886 - 143s/epoch - 1s/step
+Epoch 43/100
+101/101 - 142s - loss: 0.0401 - accuracy: 0.9877 - 142s/epoch - 1s/step
+Epoch 44/100
+101/101 - 146s - loss: 0.0363 - accuracy: 0.9896 - 146s/epoch - 1s/step
+Epoch 45/100
+101/101 - 142s - loss: 0.0373 - accuracy: 0.9885 - 142s/epoch - 1s/step
+Epoch 46/100
+101/101 - 138s - loss: 0.0361 - accuracy: 0.9888 - 138s/epoch - 1s/step
+Epoch 47/100
+101/101 - 141s - loss: 0.0359 - accuracy: 0.9895 - 141s/epoch - 1s/step
+Epoch 48/100
+101/101 - 134s - loss: 0.0341 - accuracy: 0.9902 - 134s/epoch - 1s/step
+Epoch 49/100
+101/101 - 145s - loss: 0.0338 - accuracy: 0.9897 - 145s/epoch - 1s/step
+Epoch 50/100
+101/101 - 134s - loss: 0.0349 - accuracy: 0.9888 - 134s/epoch - 1s/step
+Epoch 51/100
+101/101 - 125s - loss: 0.0332 - accuracy: 0.9904 - 125s/epoch - 1s/step
+Epoch 52/100
+101/101 - 126s - loss: 0.0330 - accuracy: 0.9906 - 126s/epoch - 1s/step
+Epoch 53/100
+101/101 - 124s - loss: 0.0326 - accuracy: 0.9906 - 124s/epoch - 1s/step
+Epoch 54/100
+101/101 - 125s - loss: 0.0321 - accuracy: 0.9906 - 125s/epoch - 1s/step
+Epoch 55/100
+101/101 - 126s - loss: 0.0325 - accuracy: 0.9904 - 126s/epoch - 1s/step
+Epoch 56/100
+101/101 - 121s - loss: 0.0328 - accuracy: 0.9898 - 121s/epoch - 1s/step
+Epoch 57/100
+101/101 - 123s - loss: 0.0336 - accuracy: 0.9893 - 123s/epoch - 1s/step
+Epoch 58/100
+101/101 - 124s - loss: 0.0308 - accuracy: 0.9904 - 124s/epoch - 1s/step
+Epoch 59/100
+101/101 - 121s - loss: 0.0299 - accuracy: 0.9914 - 121s/epoch - 1s/step
+Epoch 60/100
+101/101 - 123s - loss: 0.0302 - accuracy: 0.9909 - 123s/epoch - 1s/step
+Epoch 61/100
+101/101 - 125s - loss: 0.0286 - accuracy: 0.9921 - 125s/epoch - 1s/step
+Epoch 62/100
+101/101 - 122s - loss: 0.0298 - accuracy: 0.9914 - 122s/epoch - 1s/step
+Epoch 63/100
+101/101 - 124s - loss: 0.0286 - accuracy: 0.9920 - 124s/epoch - 1s/step
+Epoch 64/100
+101/101 - 122s - loss: 0.0291 - accuracy: 0.9912 - 122s/epoch - 1s/step
+Epoch 65/100
+101/101 - 122s - loss: 0.0286 - accuracy: 0.9916 - 122s/epoch - 1s/step
+Epoch 66/100
+101/101 - 122s - loss: 0.0276 - accuracy: 0.9928 - 122s/epoch - 1s/step
+Epoch 67/100
+101/101 - 124s - loss: 0.0275 - accuracy: 0.9919 - 124s/epoch - 1s/step
+Epoch 68/100
+101/101 - 123s - loss: 0.0286 - accuracy: 0.9906 - 123s/epoch - 1s/step
+Epoch 69/100
+101/101 - 122s - loss: 0.0262 - accuracy: 0.9924 - 122s/epoch - 1s/step
+Epoch 70/100
+101/101 - 125s - loss: 0.0268 - accuracy: 0.9920 - 125s/epoch - 1s/step
+Epoch 71/100
+101/101 - 123s - loss: 0.0270 - accuracy: 0.9920 - 123s/epoch - 1s/step
+Epoch 72/100
+101/101 - 122s - loss: 0.0262 - accuracy: 0.9918 - 122s/epoch - 1s/step
+Epoch 73/100
+101/101 - 123s - loss: 0.0252 - accuracy: 0.9922 - 123s/epoch - 1s/step
+Epoch 74/100
+101/101 - 123s - loss: 0.0253 - accuracy: 0.9930 - 123s/epoch - 1s/step
+Epoch 75/100
+101/101 - 125s - loss: 0.0264 - accuracy: 0.9914 - 125s/epoch - 1s/step
+Epoch 76/100
+101/101 - 122s - loss: 0.0241 - accuracy: 0.9932 - 122s/epoch - 1s/step
+Epoch 77/100
+101/101 - 123s - loss: 0.0255 - accuracy: 0.9921 - 123s/epoch - 1s/step
+Epoch 78/100
+101/101 - 123s - loss: 0.0258 - accuracy: 0.9920 - 123s/epoch - 1s/step
+Epoch 79/100
+101/101 - 123s - loss: 0.0231 - accuracy: 0.9932 - 123s/epoch - 1s/step
+Epoch 80/100
+101/101 - 123s - loss: 0.0225 - accuracy: 0.9932 - 123s/epoch - 1s/step
+Epoch 81/100
+101/101 - 124s - loss: 0.0226 - accuracy: 0.9939 - 124s/epoch - 1s/step
+Epoch 82/100
+101/101 - 123s - loss: 0.0242 - accuracy: 0.9924 - 123s/epoch - 1s/step
+Epoch 83/100
+101/101 - 123s - loss: 0.0241 - accuracy: 0.9928 - 123s/epoch - 1s/step
+Epoch 84/100
+101/101 - 121s - loss: 0.0226 - accuracy: 0.9934 - 121s/epoch - 1s/step
+Epoch 85/100
+101/101 - 125s - loss: 0.0228 - accuracy: 0.9934 - 125s/epoch - 1s/step
+Epoch 86/100
+101/101 - 122s - loss: 0.0211 - accuracy: 0.9940 - 122s/epoch - 1s/step
+Epoch 87/100
+101/101 - 121s - loss: 0.0212 - accuracy: 0.9936 - 121s/epoch - 1s/step
+Epoch 88/100
+101/101 - 124s - loss: 0.0225 - accuracy: 0.9930 - 124s/epoch - 1s/step
+Epoch 89/100
+101/101 - 125s - loss: 0.0205 - accuracy: 0.9943 - 125s/epoch - 1s/step
+Epoch 90/100
+101/101 - 121s - loss: 0.0204 - accuracy: 0.9947 - 121s/epoch - 1s/step
+Epoch 91/100
+101/101 - 125s - loss: 0.0220 - accuracy: 0.9936 - 125s/epoch - 1s/step
+Epoch 92/100
+101/101 - 123s - loss: 0.0198 - accuracy: 0.9948 - 123s/epoch - 1s/step
+Epoch 93/100
+101/101 - 121s - loss: 0.0197 - accuracy: 0.9944 - 121s/epoch - 1s/step
+Epoch 94/100
+101/101 - 128s - loss: 0.0195 - accuracy: 0.9948 - 128s/epoch - 1s/step
+Epoch 95/100
+101/101 - 124s - loss: 0.0201 - accuracy: 0.9941 - 124s/epoch - 1s/step
+Epoch 96/100
+101/101 - 122s - loss: 0.0197 - accuracy: 0.9941 - 122s/epoch - 1s/step
+Epoch 97/100
+101/101 - 122s - loss: 0.0194 - accuracy: 0.9946 - 122s/epoch - 1s/step
+Epoch 98/100
+101/101 - 127s - loss: 0.0185 - accuracy: 0.9945 - 127s/epoch - 1s/step
+Epoch 99/100
+101/101 - 123s - loss: 0.0180 - accuracy: 0.9947 - 123s/epoch - 1s/step
+Epoch 100/100
+101/101 - 122s - loss: 0.0187 - accuracy: 0.9943 - 122s/epoch - 1s/step
+2022-04-25 08:29:09.981278: W tensorflow/python/util/util.cc:368] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
+*********************************************************************************************
+34/34 - 22s - loss: 0.0375 - accuracy: 0.9914 - 22s/epoch - 643ms/step
