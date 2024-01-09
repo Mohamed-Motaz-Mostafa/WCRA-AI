@@ -1,5 +1,7 @@
 # WCRA-AI
 Graduation Project repo.
+
+
 (![grad-project img](image.png))
 
 <p>
