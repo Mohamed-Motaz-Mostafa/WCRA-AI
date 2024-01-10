@@ -57,12 +57,12 @@ Discussion date : 2 / 7 / 2022 at<br>
 </p>
 
 
-![ezgif-3-2964f9103d](https://github.com/Mohamed-Motaz-Mostafa/WCRA-AI/assets/156100459/7c579c3c-48d9-48ac-bd16-309a0f2e0df3)![VideoEditor_20240110_022533_1](https://github.com/Mohamed-Motaz-Mostafa/WCRA-AI/assets/156100459/81c49e68-afdd-40d1-9b62-993d641eb9e9)
+![ezgif-3-2964f9103d](https://github.com/Mohamed-Motaz-Mostafa/WCRA-AI/assets/156100459/7c579c3c-48d9-48ac-bd16-309a0f2e0df3)![vlc-record-2024-01-10-02h20m21s-20220630_151151 mp4-_1](https://github.com/Mohamed-Motaz-Mostafa/WCRA-AI/assets/156100459/0502c27f-c0ff-4528-b147-5cbd93549481)
+
 
 <br>
 
-![vlc-record-2024-01-10-02h20m21s-20220630_151151 mp4-_1](https://github.com/Mohamed-Motaz-Mostafa/WCRA-AI/assets/156100459/0502c27f-c0ff-4528-b147-5cbd93549481)
-
+![VideoEditor_20240110_022533_1](https://github.com/Mohamed-Motaz-Mostafa/WCRA-AI/assets/156100459/81c49e68-afdd-40d1-9b62-993d641eb9e9)
 
 
 
