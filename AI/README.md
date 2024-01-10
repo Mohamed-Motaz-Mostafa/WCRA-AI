@@ -1,4 +1,6 @@
-#Data collection 
+##Data collection 
+
+
 <p>
 
   Data used to train the CNN can be found on [Kaggel](https://www.kaggle.com/datasets/mohamedmoataz99/wcra-ai?rvi=1) named :Chess data used to train (WCRA-project) CNN
