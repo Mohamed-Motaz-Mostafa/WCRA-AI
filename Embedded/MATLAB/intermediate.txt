@@ -1,0 +1,41 @@
+syms a1 a2 a3
+syms b1 b2 b3
+syms r1 r2
+
+a1 = 1;
+a2 = 2;
+a3 = 3;
+b1 = 4;
+b2 = 5;
+b3 = 6;
+r1 = 7;
+r2 = 8;
+
+a1 = sym(1);
+a2 = sym(2);
+a3 = sym(3);
+b1 = sym(4);
+b2 = sym(5);
+b3 = sym(6);
+r1 = sym(7);
+r2 = sym(8);
+
+assume(th2, "positive");
+assume(th3, "positive");
+assume(a1, "positive");
+assume(a2, "positive");
+assume(a3, "positive");
+assume(b1, "positive");
+assume(b2, "positive");
+assume(b3, "positive");
+assume(r1, "positive");
+assume(r2, "positive");
+
+
+%assume( X<500e-3 & X>25e-3);
+%assume( Y<200e-3 & Y>-200e-3);
+assume( Z<500e-3 & Z>40e-3);
+assume( th2<pi & th2>0);
+assume( th2<pi & th2>0);
+
+%R = sqrt(X^2 + Y^2);

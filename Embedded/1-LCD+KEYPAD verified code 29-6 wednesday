@@ -1,0 +1,821 @@
+#include <avr/interrupt.h>
+#include <Servo.h>
+//#include <Wire.h>
+#include <Keypad.h>
+#include <LiquidCrystal.h>
+
+/**********************************KEYPAD****************************************/
+const byte ROWS = 3; //four rows
+const byte COLS = 3; //three columns
+char keys[ROWS][COLS] = {
+  {'1', '2', '3'},
+  {'4', '5', '6'},
+  {'7', '8', '9'},
+};
+byte rowPins[ROWS] = {8, 7, 6}; //connect to the row pinouts of the keypad{8,7,5}
+byte colPins[COLS] = {4, 3, 2}; //connect to the column pinouts of the keypad  2,5
+
+Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
+/************************************************************************************/
+
+
+
+/*****************************************LCD**************************************/
+//const int rs = 13, en = 12, d4 =A0, d5 = A1, d6 = A2, d7 = A3;
+#define rs 12
+#define en 13
+#define d4 A0
+#define d5 A1
+#define d6 A2
+#define d7 A3
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+/**********************************************************************************/
+
+Servo myservo_1, myservo_2, myservo_3, Gripper_servo ;
+
+
+
+typedef struct spherical_coordinates
+{
+  double th1;
+  double th2;
+  double th3;
+} spherical_coordinates;
+
+typedef struct cartesian_coordinates
+{
+  double X;
+  double Y;
+  double Z;
+} cartesian_coordinates;
+
+
+spherical_coordinates theta_array[8][8]={ {{54.83, 118.00, 111.56}, {62.04, 125.99,105.18}, {72.74, 136.43, 102.93}, {81.16, 143.02,  94.82} ,{93.84, 143.02,90.82 }, {104.76, 135.93, 99.43 }, {113.96, 132.49, 103.18}, {123.67, 118.50, 112.06}},
+                                         {{58.61, 104.57, 120.18}, {65.59, 111.64,116.56}, {74.74, 114.64, 114.15}, {83.36, 117.86, 112.69} ,{94.14, 118.86,109.69}, {103.26, 119.14, 112.65}, {111.41, 113.64, 115.06}, {118.39, 106.57, 117.18}},
+                                         {{61.61, 94.10,  122.26}, {66.94, 99.42, 122.96}, {74.75, 102.94, 120.62}, {83.88, 106.31, 119.58} ,{91.62, 105.81,119.08}, {99.75, 103.44, 118.12 }, {106.56, 99.92,  121.46}, {114.89, 94.60,  121.26}},
+                                         {{62.53, 86.18,  120.95}, {69.31, 87.98, 122.16}, {77.93, 90.67 , 122.64}, {84.78, 90.57,  122.08} ,{91.71, 91.07, 122.08}, {100.07, 90.67, 122.14 }, {104.69, 90.48,  121.16}, {111.97, 84.18,  121.45}},
+                                         {{64.53, 77.04,  119.97}, {70.83, 76.27, 119.29}, {77.39, 81.00 , 121.24}, {83.61, 80.64, 119.94 } ,{91.39, 81.64, 118.94}, {97.11  , 83.50, 121.24}, {103.67, 77.27,  120.29}, {109.47, 77.04,  118.97}},                
+                                         {{66.70, 66.52,  114.63}, {71.58, 68.98, 117.39}, {78.17, 68.98 , 116.16}, {83.87, 71.99,  117.02} ,{91.13, 73.49, 117.02}, {97.33  ,69.98 ,117.16 }, {101.92, 69.48,  115.89}, {106.80, 65.52,  113.63}},  
+                                         {{67.61, 57.36,  108.32}, {72.64, 57.82, 110.52}, {78.82, 59.78 , 109.58}, {84.09, 61.25,  112.09} ,{89.41, 62.75, 113.09}, {94.18  ,58.78 ,110.58 }, {99.86,  55.82,  109.52}, {105.89, 52.86,  108.32}},   
+                                         {{68.82, 45.04,  100.00}, {74.03, 47.02, 102.48}, {80.37, 49.72 , 101.49}, {84.78, 50.30,  104.20} ,{88.22, 47.80, 103.70}, {94.13  , 50.22 ,102.99}, {100.47, 48.52,  99.48 }, {103.68, 47.04,  99.00}} 
+                                         };
+//double pi = 3.142857143;
+//double zHigh = 0.20;
+//double zLow=0.058;//zLow=0.08
+#define pi  3.142857143
+//#define zHigh  0.130
+//#define zLow 0.058//zLow=0.08
+#define thHigh  00.00
+#define thLow   00.00
+
+
+spherical_coordinates homePos = {00.00, 00.00, thLow};
+spherical_coordinates lastPos = {00.00, 00.00, thLow};
+
+spherical_coordinates KillZone = {00.00, 00.00, thLow};
+spherical_coordinates Casteling_pos = {0, 0.20, thLow};
+
+spherical_coordinates Queen_pos={00.00,00.00,thLow};
+spherical_coordinates Rook_pos={00.00,00.00,thLow};
+spherical_coordinates Knight_pos={00.00,00.00,thLow};
+spherical_coordinates bishop_pos={00.00,00.00,thLow};
+
+const int i2cByteNum = 6;
+
+//first position
+int col_index;
+int row_index;
+//second position
+int index_column_p2;
+int index_row_p2;
+//Move Type
+char move_type ;
+
+cartesian_coordinates  tempPos2, tempPos3; //structs store moves
+//cartesian_coordinates tempPos, second_position_c_coords;
+spherical_coordinates tempPos, second_position_c_coords;
+#define X_initial 0.184// 0.184
+#define Y_initial 0.098
+#define Center_to_center 0.028
+
+#define stepDenominator  30
+#define stepTime  100
+#define Gripper_delay 15
+char key ;
+
+bool flag_1 = false;
+bool flag_2 = false;
+bool first_pos_flag = true;
+bool i2c_recieving_flag = false;
+bool keypad_flag_color = true;
+bool keypad_flag_mode = true;
+bool keypad_flag_difficulty = true;
+bool keypad_flag_upgrade = true;
+bool user_upgrade_request_flag=false;
+spherical_coordinates  calculateAngles (spherical_coordinates);
+void  pathFinder (spherical_coordinates , spherical_coordinates);
+void PickUp(void);
+void Drop(void);
+void MovePiece (spherical_coordinates targetPos, spherical_coordinates attackerPos );
+void ELIMINATION (spherical_coordinates attackerPos, spherical_coordinates executedPos );
+void CASTELING(spherical_coordinates Knight_pos, spherical_coordinates Rook_pos );
+//void UPGRADE(spherical_coordinates first_pos , spherical_coordinates targetPos );
+void UPGRADE_to_QUEEN(spherical_coordinates first_pos , spherical_coordinates targetPos );
+void UPGRADE_to_ROOK(spherical_coordinates first_pos , spherical_coordinates targetPos );
+void UPGRADE_to_KNIGHT(spherical_coordinates first_pos , spherical_coordinates targetPos );
+void UPGRADE_to_BISHOP(spherical_coordinates first_pos , spherical_coordinates targetPos );
+void Check_mode(void);
+void Pick_sides(void);
+void GoToHome();
+void user_upgrade_request(void);
+void check_index(String chessnotation);
+
+ int Contrast=70;
+
+void setup() {
+  Serial.begin(9600);   
+  lcd.begin(16, 2);
+  myservo_1 .attach(3);//pin = 11
+  myservo_2 .attach(5);
+  myservo_3.attach(9);
+  /**************LCD********************/
+
+  // set up the LCD's number of columns and rows:
+  lcd.begin(16, 2);
+  analogWrite(11, Contrast);
+  pinMode(A0, OUTPUT);
+  digitalWrite(A0, HIGH);
+  pinMode(A1, OUTPUT);
+  digitalWrite(A1, HIGH);
+  pinMode(A2, OUTPUT);
+  digitalWrite(A2, HIGH);
+  pinMode(A3, OUTPUT);
+  digitalWrite(A3, HIGH);
+  /*************upgrade request external interrupt************************/
+   pinMode(2, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(2), user_upgrade_request, CHANGE);
+  /**********************************************************************/
+
+}
+
+void loop() {
+  delay(5000);
+  lcd.setCursor(0, 0);
+  lcd.write("welcome         ");
+  lcd.setCursor(0, 1);
+  lcd.write("WACRA           ");
+  lcd.setCursor(0, 0);
+  delay(2000);
+  
+  if (first_pos_flag == true)
+  {
+    //GoTOHome();
+    Mode_cheker();
+    Pick_sides();
+   // check_index("e4f6m");
+    first_pos_flag =false;
+  }
+
+ 
+
+if (Serial.available() > 0) 
+  {
+     lcd.setCursor(0, 0);
+     String ChessNotation = Serial.readStringUntil('\n');
+     col_index=ChessNotation.charAt(0);
+     row_index=ChessNotation.charAt(1);
+     index_column_p2=ChessNotation.charAt(2);
+     index_row_p2=ChessNotation.charAt(3);
+     //first position
+     col_index = col_index - 97; //abcdefgh h=1 ,a=8   ascii(h=104)
+     row_index = row_index - 49; //12345678  start from 1>>8  ascii(1=49 , 0=48)
+
+     //second position
+     index_column_p2 = index_column_p2 - 97;
+     index_row_p2 = index_row_p2 - 49;
+     //Move Type
+     move_type = ChessNotation.charAt(4);
+     /****************************************/
+     tempPos = theta_array[col_index][row_index];
+     second_position_c_coords = theta_array[index_column_p2][index_row_p2];
+     /******************************************/
+        switch (move_type)
+        {
+          case 'c':   //ascii code for letter x =120
+            {
+              ELIMINATION(tempPos, second_position_c_coords);
+              break;
+            }
+          case 'm':   //ascii code for letter m=109
+            {
+              MovePiece(tempPos, second_position_c_coords);
+              break;
+            }
+          case 's':   //casteling
+            {
+              CASTELING(tempPos, second_position_c_coords); // CASTELING(knightpos,rookpos)
+              break;
+            }
+           /***********************Upgrade cases************************************/ 
+          case 'q':   //upgrading USER
+            {
+              UPGRADE_to_QUEEN(tempPos, second_position_c_coords); // user 
+              break;
+            }
+            case 'k':   //upgrading USER
+            {
+              UPGRADE_to_KNIGHT(tempPos, second_position_c_coords); // user 
+              break;
+            }
+            case 'r':   //upgrading USER
+            {
+              UPGRADE_to_ROOK(tempPos, second_position_c_coords); // user 
+              break;
+            }
+            case 'b':   //upgrading USER
+            {
+              UPGRADE_to_BISHOP(tempPos, second_position_c_coords); // user 
+              break;
+            }
+          /**********************************************************************/
+          case 'o':
+            {
+              keypad_flag_mode == true;
+              Check_mode();
+              break;
+            }
+          case 'x':
+            {
+              keypad_flag_color = true;
+              Pick_sides();
+              break;
+            }
+    
+        }
+   
+  }
+
+
+}
+
+spherical_coordinates calculateAngles (cartesian_coordinates coords)
+{
+  spherical_coordinates s_c_1 ;
+  double R = sqrt(pow(coords.X, 2) + pow(coords.Y, 2)) ;
+  double Z = coords.Z;
+  double X = coords.X;
+  double Y = coords.Y;
+
+  s_c_1.th1 = 90 - atan(coords.Y / coords.X) / pi * 180; //  s_c_1.th1 = 90 + atan(coords.Y/coords.X)/pi*180;
+  // Serial.println(s_c_1.th1);
+
+  s_c_1.th2 = -2 * atan((544000000 * Z + sqrt(- 4000000000000000000 * pow(R, 4) + 2230560000000000000 * pow(R, 3) - 8000000000000000000 * pow(R, 2) * pow(Z, 2) + 156480000000000000 * pow(R, 2) * Z - 148712741600000000 * pow(R, 2) + 2230560000000000000 * R * pow(Z, 2) - 43629753600000000 * R * Z - 45238441278960000 * R - 4000000000000000000 * pow(Z, 4) + 156480000000000000 * pow(Z, 3) + 160719253600000000 * pow(Z, 2) - 3173602723680000 * Z + 4662862914366351) - 5320320) / (- 2000000000 * pow(R, 2) + 13640000 * R - 2000000000 * pow(Z, 2) + 39120000 * Z + 42417447));
+  s_c_1.th2 = s_c_1.th2 / pi * 180;
+  // Serial.println(s_c_1.th2);
+
+  s_c_1.th3 = 2 * atan((584000000 * R + sqrt((2000000000 * pow(R, 2) - 557640000 * R + 2000000000 * pow(Z, 2) - 39120000 * Z + 38861593) * (- 2000000000 * pow(R, 2) + 557640000 * R - 2000000000 * pow(Z, 2) + 39120000 * Z + 119986407)) - 81415440) / (2000000000 * pow(R, 2) - 557640000 * R + 2000000000 * pow(Z, 2) + 544880000 * Z + 38990073));
+  s_c_1.th3 = s_c_1.th3 / pi * 180;
+  // Serial.println(s_c_1.th3);
+  return s_c_1;
+}
+
+
+
+void pathFinder(spherical_coordinates currentPos, spherical_coordinates targetPos)
+{
+  
+  Serial.println("move in Z upwards coordinate");
+  //move in Z upwards coordinate
+  double stepSize_Z_up;
+  double movePos_Z_up;
+  stepSize_Z_up = (thHigh - currentPos.th3) / stepDenominator ;
+  for (int i = 0 ; i < stepDenominator; i++)
+  {
+    //  Serial.println(i);
+    movePos_Z_up = currentPos.th3 + ((i + 1) * stepSize_Z_up );
+    
+    myservo_1.write(currentPos.th1);
+    myservo_2.write(currentPos.th2);
+    myservo_3.write(movePos_Z_up);   
+    delay(stepTime);
+  }
+
+  Serial.println("move in Y coordinate");
+  //move in Y coordinate
+  double  movePos_Y;
+  double stepSize_Y;
+  
+  stepSize_Y = (targetPos.th1 - currentPos.th1) / stepDenominator;
+  for (int i = 0 ; i < stepDenominator ; i++)
+  {
+    // Serial.println(i);
+   
+    movePos_Y = currentPos.th1 + ((i + 1) * stepSize_Y );
+   
+    myservo_1.write(movePos_Y);   //base servo
+    myservo_2.write(currentPos.th2);
+    myservo_3.write(thHigh);
+    delay(stepTime);
+  }
+ 
+
+ Serial.println("move in X coordinate");
+  //move in X  coordinate
+  double movePos_X;
+  double stepSize_X;
+  stepSize_X = (targetPos.th2 - currentPos.th2) / stepDenominator;
+  for (int i = 0 ; i < stepDenominator ; i++)
+  {
+    // Serial.println(i);
+    movePos_X = currentPos.th2 + ((i + 1) * stepSize_X );
+    
+    myservo_1.write(targetPos.th1);  //base servo
+    myservo_2.write(movePos_X);
+    myservo_3.write(thHigh);
+    delay(stepTime);
+  }
+  
+
+
+  Serial.println("move in Z downwards coordinatea");
+  // move in Z downwards coordinate
+  double stepSize_Z_down;
+  double movePos_Z_down;
+  stepSize_Z_down = (targetPos.th3 - thHigh) / stepDenominator;
+  for (int i = 0 ; i < stepDenominator; i++)
+  {
+    //  Serial.println(i);
+    movePos_Z_down = thHigh + ((i + 1) * stepSize_Z_down );
+   
+    myservo_1.write(targetPos.th1);
+    myservo_2.write(targetPos.th2);
+    myservo_3.write(movePos_Z_down);
+    delay(stepTime);
+  }
+  
+}
+
+void PickUp(void)
+{
+  Gripper_servo.attach(10);
+  Serial.print("Gripper Pick up piece");
+  Gripper_servo.write(148);
+  for (int i = 0; i <= 10; ++i)
+  {
+    Gripper_servo.write((int)(148 + i * -10.8));
+    delay(Gripper_delay);
+  }
+  Gripper_servo.detach();
+}
+
+void Drop(void)
+{
+  Gripper_servo.attach(10);
+  Serial.print("Gripper drop piece");
+  Gripper_servo.write(40);
+  for (int i = 0; i <= 10; ++i)
+  {
+    Gripper_servo.write((int)(40 + i * 10.8));
+    delay(Gripper_delay);
+  }
+  Gripper_servo.detach();
+}
+
+void MovePiece(spherical_coordinates StartPos, spherical_coordinates EndPos )
+{
+  //("homePos >>>> StartPos");
+  pathFinder(homePos , StartPos);
+  PickUp();
+  //("StartPos >>>> EndPos");
+  pathFinder(StartPos , EndPos );
+  Drop();
+ // ("EndPos >>>> homePos");
+  pathFinder(EndPos, homePos );
+}
+
+void ELIMINATION (spherical_coordinates StartPos, spherical_coordinates EndPos )
+{
+  MovePiece(EndPos, KillZone);
+  MovePiece(StartPos, EndPos);
+}
+void CASTELING(spherical_coordinates Knight_pos, spherical_coordinates Rook_pos )
+{
+  //("homePos >>>>> Knight_pos ");
+  pathFinder(homePos, Knight_pos);
+  PickUp();
+  //("Knight_pos >>>>> Casteling_pos ");
+  pathFinder(Knight_pos, Casteling_pos);
+  Drop();
+  //("Casteling_pos >>>>> Rook_pos ");
+  pathFinder(Casteling_pos, Rook_pos);
+  PickUp();
+  //("Rook_pos >>>>> Knight_pos ");
+  pathFinder(Rook_pos, Knight_pos);
+  Drop();
+  //("Knight_pos >>>>> Casteling_pos ");
+  pathFinder(Knight_pos, Casteling_pos);
+  PickUp();
+  //("Casteling_pos >>>>> Rook_pos ");
+  pathFinder(Casteling_pos, Rook_pos);
+  Drop();
+  //("Rook_pos >>>>> homePos ");
+  pathFinder(Rook_pos, homePos);
+}
+
+/*********************UPGRADE CASES******************************/
+void UPGRADE_to_QUEEN(spherical_coordinates first_pos , spherical_coordinates targetPos)
+{
+  //("homePos >>>>> first_pos ");
+  pathFinder(homePos, first_pos);
+  PickUp();
+  //("first_pos >>>>> KillZone ");
+  pathFinder(first_pos, KillZone);
+  Drop();
+  //("KillZone >>>>> UpgradeZone ");
+  pathFinder(KillZone,Queen_pos );
+  PickUp();
+  //("UpgradeZone >>>>> targetPos ");
+  pathFinder(Queen_pos, targetPos);
+  Drop();
+  //("targetPos >>>>> homePos ");
+  pathFinder(targetPos, homePos);
+
+}
+void UPGRADE_to_ROOK(spherical_coordinates first_pos , spherical_coordinates targetPos)
+{
+  //("homePos >>>>> first_pos ");
+  pathFinder(homePos, first_pos);
+  PickUp();
+  //("first_pos >>>>> KillZone ");
+  pathFinder(first_pos, KillZone);
+  Drop();
+  //("KillZone >>>>> UpgradeZone ");
+  pathFinder(KillZone,Rook_pos );
+  PickUp();
+  //("UpgradeZone >>>>> targetPos ");
+  pathFinder(Rook_pos, targetPos);
+  Drop();
+  //("targetPos >>>>> homePos ");
+  pathFinder(targetPos, homePos);
+
+}
+void UPGRADE_to_KNIGHT(spherical_coordinates first_pos , spherical_coordinates targetPos)
+{
+ //("homePos >>>>> first_pos ");
+  pathFinder(homePos, first_pos);
+  PickUp();
+  //("first_pos >>>>> KillZone ");
+  pathFinder(first_pos, KillZone);
+  Drop();
+  //("KillZone >>>>> UpgradeZone ");
+  pathFinder(KillZone,Knight_pos );
+  PickUp();
+  //("UpgradeZone >>>>> targetPos ");
+  pathFinder(Knight_pos, targetPos);
+  Drop();
+  //("targetPos >>>>> homePos ");
+  pathFinder(targetPos, homePos); 
+}
+void UPGRADE_to_BISHOP(spherical_coordinates first_pos , spherical_coordinates targetPos)
+{
+  //("homePos >>>>> first_pos ");
+  pathFinder(homePos, first_pos);
+  PickUp();
+  //("first_pos >>>>> KillZone ");
+  pathFinder(first_pos, KillZone);
+  Drop();
+  //("KillZone >>>>> UpgradeZone ");
+  pathFinder(KillZone,bishop_pos );
+  PickUp();
+  //("UpgradeZone >>>>> targetPos ");
+  pathFinder(bishop_pos, targetPos);
+  Drop();
+  //("targetPos >>>>> homePos ");
+  pathFinder(targetPos, homePos); 
+}
+/*****************************************************************/
+void give_index(char rank, char file)
+{
+  col_index = file - 97; //abcdefgh h=7 ,a=0   a=97
+  row_index = rank - 49; //12345678  start from 1>>8   ascii(1=49 , 0=48)
+  // Serial.println("         ");
+  // Serial.println("column , row");
+  // Serial.println(col_index);
+  // Serial.println(row_index);
+ // Serial.println();
+  tempPos = theta_array[col_index][row_index];
+
+  pathFinder(lastPos, tempPos);
+  //CASTELING(lastPos,tempPos);
+  // UPGRADE(lastPos, tempPos);
+  lastPos = tempPos;
+}
+
+
+void GoTOHome()
+{
+  pathFinder(lastPos, homePos);
+  lastPos = homePos;
+}
+
+
+void Check_mode(void)
+{
+
+  while (keypad_flag_mode == true)
+  {
+    lcd.setCursor(0, 0);
+    lcd.print("Mode:1-Online   ");
+    lcd.setCursor(0, 1);
+    lcd.print("or 2-Offline    ");
+    key = keypad.getKey();
+    if (key) {
+      Serial.print(key);//send to raspberry pi
+      lcd.setCursor(0, 0);
+      if (key == 1) {
+        lcd.print("Mode is:Online");
+        Serial.print('1');//send to raspberry pi
+        keypad_flag_mode = false;
+      }
+      else if (key == 2)
+      {
+        lcd.print("Mode is:Offline");
+        /*****************************************/
+        delay(2000);
+        lcd.setCursor(0, 0);
+        lcd.print("Difficulty :");
+        lcd.setCursor(0, 1);
+        lcd.print("1-Eazy 2-Hard");
+        keypad_flag_difficulty = true;
+        while (keypad_flag_difficulty == true)
+        {
+          key = keypad.getKey();
+          if (key) {
+            if (key == 1)
+            { Serial.print(key);//send to raspberry pi
+              lcd.print("Mode is:Eazy");
+              keypad_flag_difficulty = false;
+            }
+            else if (key == 2)
+            { Serial.print(key);//send to raspberry pi
+              lcd.print("Mode is:Hard");
+              keypad_flag_difficulty = false;
+            }
+            else
+            {
+              lcd.setCursor(0, 0);
+              lcd.print("input not valid ");
+              lcd.setCursor(0, 1);
+              lcd.print("1-Eazy or 2-Hard");
+            }
+          }
+        }
+        keypad_flag_mode = false;
+      }
+      else
+      {
+        lcd.setCursor(0, 0);
+        lcd.print("input not valid ");
+        lcd.setCursor(0, 1);
+        lcd.print("press 1-ON 2-OFF");
+      }
+
+
+    }
+  }
+}
+void Pick_sides(void)
+{
+  lcd.setCursor(0, 0);
+  lcd.print("Color:1-Black   ");
+  lcd.setCursor(0, 1);
+  lcd.print("or 2-White      ");
+  while (keypad_flag_color == true)
+  {
+    key = keypad.getKey();
+    if (key) {
+      lcd.setCursor(0, 0);
+      if (key == '1')
+      {
+        Serial.println(key);
+        lcd.print("color is:Black  ");
+        lcd.setCursor(0, 1);
+        lcd.print("                ");
+        delay(2000);
+        Serial.print(key); //send to RPI
+        keypad_flag_color = false;
+      }
+      else if (key == '2')
+      { Serial.println(key);
+        lcd.setCursor(0, 0);
+        lcd.print("color is:White  ");
+        lcd.setCursor(0, 1);
+        lcd.print("                ");
+        delay(2000);
+        Serial.print(key);//send to RPI
+        keypad_flag_color = false;
+      }
+      else
+      {
+        lcd.setCursor(0, 0);
+        lcd.print("input not valid ");
+        lcd.setCursor(0, 1);
+        lcd.print("input 1-B or 2-W ");
+      }
+    }
+
+  }
+}
+
+
+void Upgrade_checker(void)
+{
+  lcd.setCursor(0, 0);
+  lcd.print("Piece to upgrade:");
+  lcd.setCursor(0, 1);
+  lcd.print("1-Q 2-R 3-K 4-B ");
+  while (keypad_flag_upgrade == true)
+  {
+    key = keypad.getKey();
+    if (key) {
+      lcd.setCursor(0, 0);
+      lcd.setCursor(0, 0);
+      if (key == '1')
+      {
+        Serial.print(key);//send to RPI
+        lcd.print("Piece is Queen");
+        //return key;
+        keypad_flag_upgrade = false;
+      }
+      else if (key == '2')
+      { Serial.print(key);//send to RPI
+        lcd.print("Piece is Rook");
+        //return key;
+        keypad_flag_upgrade = false;
+      }
+      else if (key == '3')
+      { Serial.print(key);//send to RPI
+        lcd.print("Piece is Knight");
+        //return key;
+        keypad_flag_upgrade = false;
+      }
+      else if (key == '4')
+      { Serial.print(key);//send to RPI
+        lcd.print("Piece is Bishop");
+        //return key;
+        keypad_flag_upgrade = false;
+      }
+      else
+      {
+        lcd.setCursor(0, 0);
+        lcd.print("input not valid ");
+        lcd.setCursor(0, 1);
+        lcd.print("1-Q 2-R 3-K 4-B ");
+        lcd.setCursor(0, 0);
+      }
+    }
+  }
+}
+
+
+void board_checker(void)
+{
+  GoTOHome();
+  for (int c = 'h'; c >= 'a'; c--)
+  {
+    for (int r = '1'; r <= '8'; r++)
+    {
+      give_index(r, c);
+      //PickUp();
+      // Drop();
+    }
+    
+  }
+}
+
+
+void user_upgrade_request(void)
+{
+  user_upgrade_request_flag=true;
+}
+
+void check_index(String chessnotation)
+{
+     col_index=chessnotation.charAt(0);
+     row_index=chessnotation.charAt(1);
+     index_column_p2=chessnotation.charAt(2);
+     index_row_p2=chessnotation.charAt(3);
+     move_type=chessnotation.charAt(4);
+     
+     Serial.println(col_index);
+     Serial.println(row_index);
+     Serial.println(index_column_p2);
+     Serial.println(index_row_p2);
+     Serial.println(move_type);
+
+
+     //first position
+//     col_index = col_index - 97; //abcdefgh h=1 ,a=8   ascii(h=104)
+//     row_index = row_index - 49; //12345678  start from 1>>8  ascii(1=49 , 0=48)
+//
+//     //second position
+//     index_column_p2 = index_column_p2 - 97;
+//     index_row_p2 = index_row_p2 - 49;
+//     //Move Type
+//     move_type = chessnotation.charAt(4);
+//     /****************************************/
+//     tempPos = theta_array[col_index][row_index];
+//     second_position_c_coords = theta_array[index_column_p2][index_row_p2];
+//     MovePiece(tempPos,second_position_c_coords);
+     
+}
+
+
+
+
+void Mode_cheker(void)
+{
+  lcd.setCursor(0, 0);
+    lcd.print("Mode:1-Online   ");
+    lcd.setCursor(0, 1);
+    lcd.print("or 2-Offline    ");
+  while (keypad_flag_mode == true)
+  {
+    key = keypad.getKey();
+    if (key) {
+     // lcd.setCursor(0, 0);
+      if (key == '1')
+      {
+        lcd.setCursor(0, 0);
+        lcd.print("Mode is:Online  ");
+        lcd.setCursor(0, 1);
+        lcd.print("                ");
+        delay(2000);
+        Serial.print(key); //send to RPI
+        keypad_flag_mode = false;
+      }
+      else if (key == '2')
+      {
+        lcd.setCursor(0, 0);
+        lcd.print("Mode is:Offline ");
+        lcd.setCursor(0, 1);
+        lcd.print("                ");
+        delay(2000);
+        Serial.print(key);//send to RPI
+        
+        lcd.setCursor(0, 0);
+        lcd.print("Difficulty :    ");
+        lcd.setCursor(0, 1);
+        lcd.print("1-Eazy  2-Hard  ");
+        keypad_flag_difficulty = true;
+        while (keypad_flag_difficulty == true)
+        {
+          key = keypad.getKey();
+          if (key) {
+            if (key == '1')
+            { Serial.print(key);//send to raspberry pi
+              lcd.setCursor(0, 0);
+              lcd.print("Mode is:Eazy    ");
+              lcd.setCursor(0, 1);
+              lcd.print("                ");
+              delay(2000);
+              keypad_flag_difficulty = false;
+            }
+            else if (key == '2')
+            { Serial.print(key);//send to raspberry pi
+              lcd.setCursor(0, 0);
+              lcd.print("Mode is:Hard    ");
+              lcd.setCursor(0, 1);
+              lcd.print("                ");
+              delay(2000);
+              keypad_flag_difficulty = false;
+            }
+            else
+            {
+              lcd.setCursor(0, 0);
+              lcd.print("input not valid ");
+              lcd.setCursor(0, 1);
+              lcd.print("1-Eazy or 2-Hard");
+            }
+          }
+        }
+        keypad_flag_mode = false;
+      }
+      else
+      {
+        lcd.setCursor(0, 0);
+        lcd.print("input not valid ");
+        lcd.setCursor(0, 1);
+        lcd.print("input 1-ON 2-OFF");
+      }
+    }
+
+  }
+}
+
+
+  
+ 
+   
+
+     
