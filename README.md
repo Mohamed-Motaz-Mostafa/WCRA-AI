@@ -55,3 +55,8 @@ and my colleague that was Supporting us morally despite not being in the team, T
 Discussion date : 2 / 7 / 2022 at<br>
 [Higher Institute of Engineering and Technology in Tanta. (THIET)](https://thiet.edu.eg/ar)
 </p>
+
+
+![ezgif-3-2964f9103d](https://github.com/Mohamed-Motaz-Mostafa/WCRA-AI/assets/156100459/7c579c3c-48d9-48ac-bd16-309a0f2e0df3)
+
+
